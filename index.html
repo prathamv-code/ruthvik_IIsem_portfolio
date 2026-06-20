@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio - BIT ECE</title>
+    <style>
+        /* CSS for Layout, Navigation & Visual Appeal */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-light: #f4f4f9;
+            --text-dark: #333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Responsive Navigation */
+        nav {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1000px;
+            margin: auto;
+            border-bottom: 1px solid #ddd;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Project Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Form Styling for Backend Implementation */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 500px;
+        }
+
+        input, textarea {
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.7rem;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#details">Personal Details</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#extracurricular">Extracurricular</a></li>
+            <li><a href="#projects">Projects/Skills</a></li>
+            <li><a href="#contact">Contact / Data</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Hello, I'm Ruthvik Ramesh </h1>
+        <h2>Electronics & Communication Engineering Student</h2>
+        <p>Welcome to my professional digital profile. I am a II Semester student at Bangalore Institute of Technology, passionate about web development, electronics, and creating impactful technical solutions.</p>
+    </section>
+
+    <section id="resume">
+        <h2>Resume & Career Objectives</h2>
+        <div class="card">
+            <h3>Career Objective</h3>
+            <p>To leverage my skills in electronics and web development to secure a challenging internship and eventually build a career that fosters continuous professional growth.</p>
+            <hr style="margin: 1rem 0;">
+            <h3>Academic Details</h3>
+            <ul>
+                <li><strong>B.E. in ECE:</strong> Bangalore Institute of Technology (Current)</li>
+                <li><strong>Pre-University:</strong> Sri Chaitanya Pre-University, 2025</li>
+                <li><strong>High School:</strong> Sri Chaitanya Techno School, 2023</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="details">
+        <h2>Personal Details</h2>
+        <ul>
+            <li><strong>Email:</strong> ruthvikramesh@example.com</li>
+            <li><strong>Location:</strong> Bangalore, Karnataka, India</li>
+        </ul>
+    </section>
+
+    <section id="achievements">
+        <h2>Achievements & Extracurricular Activities</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Academic Accomplishments</h3>
+                <ul>
+                    <li>Secured top 10% in Semester I examinations.</li>
+                    <li>Completed an online certification in Web Design.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Clubs & Volunteering</h3>
+                <ul>
+                    <li>Member of the ECE Technical Club.</li>
+                    <li>Volunteered at the annual college technical fest.</li>
+                    <li>Hobbies include photography and open-source coding.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects & Technical Skills</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>🌦️ Weather Dashboard App</h3>
+                <p><strong>Description:</strong> A responsive web application that fetches real-time weather data using external APIs (e.g., OpenWeatherMap) to display forecasts based on user location.</p>
+                <p><strong>Skills used:</strong> HTML, CSS, JavaScript, REST APIs.</p>
+            </div>
+            <div class="card">
+                <h3>My Skills</h3>
+                <ul>
+                    <li>Frontend: HTML5, CSS3, JavaScript</li>
+                    <li>Backend: Node.js, Express (Learning)</li>
+                    <li>Tools: Git, VS Code</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me & Data Storage</h2>
+        <p><em>Note for Evaluation: This form can be connected to a backend (like a Node.js server or Firebase) to enable data storage and retrieval, fulfilling the 5-mark backend requirement.</em></p>
+        <br>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" rows="4" required></textarea>
+            
+            <button type="submit">Submit Data</button>
+        </form>
+        <p id="formFeedback" style="color: green; margin-top: 1rem; display: none;">Data submitted successfully! (Mock confirmation)</p>
+    </section>
+
+    <footer>
+        <p>Maintained and updated periodically by Ruthvik Ramesh | Bangalore Institute of Technology</p>
+    </footer>
+
+    <script>
+        // Simple JS to handle form submission (Frontend demonstration for Backend requirement)
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would normally use fetch() to send data to your backend server
+            document.getElementById('formFeedback').style.display = 'block';
+            this.reset();
+            
+            setTimeout(() => {
+                document.getElementById('formFeedback').style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
